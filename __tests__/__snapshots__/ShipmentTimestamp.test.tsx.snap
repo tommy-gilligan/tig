@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a shipment timestamp 1`] = `
+<div>
+  <b
+    class="chakra-text css-0"
+  >
+    January 3, 2024 at 1:23 PM
+  </b>
+</div>
+`;
