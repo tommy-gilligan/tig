@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders loading indicator and then tracking history 1`] = `
+<div>
+  <ul
+    class="css-33uwqc"
+    role="list"
+  >
+    <li
+      class="css-0"
+    >
+      <div
+        class="css-70qvj9"
+      >
+        <svg
+          class="chakra-icon chakra-icon css-90jcfk"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M12,0A12,12,0,1,0,24,12,12.014,12.014,0,0,0,12,0Zm6.927,8.2-6.845,9.289a1.011,1.011,0,0,1-1.43.188L5.764,13.769a1,1,0,1,1,1.25-1.562l4.076,3.261,6.227-8.451A1,1,0,1,1,18.927,8.2Z"
+            fill="currentColor"
+          />
+        </svg>
+        <div
+          class="css-16m2kcs"
+        >
+          <div
+            class="css-0"
+          >
+            <b
+              class="chakra-text css-0"
+              data-testid="status"
+            >
+              Picked Up
+            </b>
+            <br />
+            <p
+              class="chakra-text css-0"
+              data-testid="location"
+            >
+              212 Smith Street, Epping 3000 VIC
+            </p>
+          </div>
+          <div
+            class="css-4pozj5"
+          >
+            <b
+              class="chakra-text css-0"
+              data-testid="date"
+            >
+              1/8/2023
+            </b>
+            <p
+              class="chakra-text css-0"
+              data-testid="time"
+            >
+              12:00 AM
+            </p>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;

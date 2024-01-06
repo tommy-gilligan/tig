@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a timestamp 1`] = `
+<div>
+  <div
+    class="css-4pozj5"
+  >
+    <b
+      class="chakra-text css-0"
+      data-testid="date"
+    >
+      1/8/2023
+    </b>
+    <p
+      class="chakra-text css-0"
+      data-testid="time"
+    >
+      12:00 AM
+    </p>
+  </div>
+</div>
+`;
