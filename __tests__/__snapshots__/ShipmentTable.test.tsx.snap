@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a table with a single row when there is just one shipment 1`] = `
+<div>
+  <div
+    class="chakra-table__container css-1cjxmxx"
+  >
+    <table
+      class="chakra-table css-0"
+    >
+      <thead
+        class="css-0"
+      >
+        <tr
+          class="css-0"
+        >
+          <th
+            class="css-1x7zhlm"
+          >
+            <div
+              class="css-1ib8bca"
+            >
+              Shipment
+              <svg
+                class="chakra-icon css-142lcpk"
+                focusable="false"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.891 9.992a1 1 0 1 1 1.416 1.415l-4.3 4.3a1 1 0 0 1-1.414 0l-4.3-4.3A1 1 0 0 1 4.71 9.992l3.59 3.591 3.591-3.591zm0-3.984L8.3 2.417 4.709 6.008a1 1 0 0 1-1.416-1.415l4.3-4.3a1 1 0 0 1 1.414 0l4.3 4.3a1 1 0 1 1-1.416 1.415z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            class="css-1x7zhlm"
+          >
+            <div
+              class="css-1ib8bca"
+            >
+              Status
+              <svg
+                class="chakra-icon css-142lcpk"
+                focusable="false"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.891 9.992a1 1 0 1 1 1.416 1.415l-4.3 4.3a1 1 0 0 1-1.414 0l-4.3-4.3A1 1 0 0 1 4.71 9.992l3.59 3.591 3.591-3.591zm0-3.984L8.3 2.417 4.709 6.008a1 1 0 0 1-1.416-1.415l4.3-4.3a1 1 0 0 1 1.414 0l4.3 4.3a1 1 0 1 1-1.416 1.415z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="css-0"
+      >
+        <tr
+          class="css-4g6ai3"
+          data-testid="shipment-row"
+        >
+          <td
+            class="css-1o9qbhn"
+          >
+            <div
+              class="css-1y7h6an"
+              data-testid="tracking-id"
+            >
+              6789
+            </div>
+            <div
+              class="css-1dhzdx0"
+              data-testid="last-update"
+            >
+              Created: 
+              Jan 3, 2024
+            </div>
+          </td>
+          <td
+            class="css-1o9qbhn"
+          >
+            <span
+              class="chakra-badge css-1gj0zf8"
+            >
+              Delivered
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`renders nothing when there is no shipment 1`] = `<div />`;
+
+exports[`selects shipment when row is clicked 1`] = `
+<div>
+  <div
+    class="chakra-table__container css-1cjxmxx"
+  >
+    <table
+      class="chakra-table css-0"
+    >
+      <thead
+        class="css-0"
+      >
+        <tr
+          class="css-0"
+        >
+          <th
+            class="css-1x7zhlm"
+          >
+            <div
+              class="css-1ib8bca"
+            >
+              Shipment
+              <svg
+                class="chakra-icon css-142lcpk"
+                focusable="false"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.891 9.992a1 1 0 1 1 1.416 1.415l-4.3 4.3a1 1 0 0 1-1.414 0l-4.3-4.3A1 1 0 0 1 4.71 9.992l3.59 3.591 3.591-3.591zm0-3.984L8.3 2.417 4.709 6.008a1 1 0 0 1-1.416-1.415l4.3-4.3a1 1 0 0 1 1.414 0l4.3 4.3a1 1 0 1 1-1.416 1.415z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+          <th
+            class="css-1x7zhlm"
+          >
+            <div
+              class="css-1ib8bca"
+            >
+              Status
+              <svg
+                class="chakra-icon css-142lcpk"
+                focusable="false"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.891 9.992a1 1 0 1 1 1.416 1.415l-4.3 4.3a1 1 0 0 1-1.414 0l-4.3-4.3A1 1 0 0 1 4.71 9.992l3.59 3.591 3.591-3.591zm0-3.984L8.3 2.417 4.709 6.008a1 1 0 0 1-1.416-1.415l4.3-4.3a1 1 0 0 1 1.414 0l4.3 4.3a1 1 0 1 1-1.416 1.415z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class="css-0"
+      >
+        <tr
+          class="css-4g6ai3"
+          data-testid="shipment-row"
+        >
+          <td
+            class="css-1o9qbhn"
+          >
+            <div
+              class="css-1y7h6an"
+              data-testid="tracking-id"
+            >
+              6789
+            </div>
+            <div
+              class="css-1dhzdx0"
+              data-testid="last-update"
+            >
+              Created: 
+              Jan 3, 2024
+            </div>
+          </td>
+          <td
+            class="css-1o9qbhn"
+          >
+            <span
+              class="chakra-badge css-1gj0zf8"
+            >
+              Delivered
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

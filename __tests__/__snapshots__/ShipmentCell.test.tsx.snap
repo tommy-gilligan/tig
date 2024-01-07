@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a shipment cell 1`] = `
+<div>
+  <div
+    class="css-1y7h6an"
+    data-testid="tracking-id"
+  >
+    6789
+  </div>
+  <div
+    class="css-1dhzdx0"
+    data-testid="last-update"
+  >
+    Created: 
+    Jan 3, 2024
+  </div>
+</div>
+`;
