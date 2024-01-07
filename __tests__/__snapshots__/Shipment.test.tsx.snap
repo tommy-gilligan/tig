@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a delivered shipment 1`] = `
+<div>
+  <div
+    class="chakra-table__container css-1nvmkmq"
+  >
+    <table
+      class="chakra-table css-0"
+    >
+      <tbody
+        class="css-0"
+      >
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Status
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            <span
+              class="chakra-badge css-1gj0zf8"
+            >
+              Delivered
+            </span>
+          </td>
+        </tr>
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Delivered time
+          </td>
+          <td
+            class="css-v1u32z"
+            data-testid="delivered-time"
+          >
+            <b
+              class="chakra-text css-0"
+            >
+              January 6, 2024 at 10:32 AM
+            </b>
+          </td>
+        </tr>
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Delivery address
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            1 Taylor Lane, McKellar NSW 2030
+          </td>
+        </tr>
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Last updated
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            <b
+              class="chakra-text css-0"
+            >
+              January 3, 2024 at 5:18 AM
+            </b>
+          </td>
+        </tr>
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Total transit time
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            3 days
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`renders a shipment 1`] = `
+<div>
+  <div
+    class="chakra-table__container css-1nvmkmq"
+  >
+    <table
+      class="chakra-table css-0"
+    >
+      <tbody
+        class="css-0"
+      >
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Status
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            <span
+              class="chakra-badge css-1gj0zf8"
+            >
+              In-Transit
+            </span>
+          </td>
+        </tr>
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Delivery address
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            1 Taylor Lane, McKellar NSW 2030
+          </td>
+        </tr>
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Last updated
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            <b
+              class="chakra-text css-0"
+            >
+              January 3, 2024 at 5:18 AM
+            </b>
+          </td>
+        </tr>
+        <tr
+          class="css-0"
+        >
+          <td
+            class="css-mmukuq"
+          >
+            Total transit time
+          </td>
+          <td
+            class="css-v1u32z"
+          >
+            3 days
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
