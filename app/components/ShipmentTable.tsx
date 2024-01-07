@@ -65,13 +65,15 @@ const columns = [
 
 const SortIcon = ({ column }: { column: Column<ShipmentSchema> }) => {
   if (column.getCanSort()) {
+    let Icon = ArrowUpDownIcon;
+
     if ((column.getIsSorted() as string) === "asc") {
-      return <ArrowDownIcon marginLeft="10px" />;
+      Icon = ArrowDownIcon
     } else if ((column.getIsSorted() as string) === "desc") {
-      return <ArrowUpIcon marginLeft="10px" />;
-    } else {
-      return <ArrowUpDownIcon marginLeft="10px" />;
+      Icon = ArrowUpIcon
     }
+
+    return <Icon marginLeft="10px" />
   } else {
     return null;
   }
@@ -100,51 +102,65 @@ export const ShipmentTable = ({
     <TableContainer background="white" borderRadius="5px">
       <Table variant="simple">
         <Thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <Tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
-                <Th
-                  padding="0"
-                  fontWeight="normal"
-                  textTransform="none"
-                  key={header.id}
-                >
-                  <Flex
-                    padding="13px 20px"
-                    align="center"
-                    onClick={header.column.getToggleSortingHandler()}
-                    {...{ cursor: header.column.getCanSort() ? "pointer" : "" }}
-                  >
-                    {flexRender(
-                      header.column.columnDef.header,
-                      header.getContext(),
-                    )}
-                    <SortIcon column={header.column} />
-                  </Flex>
-                </Th>
-              ))}
-            </Tr>
-          ))}
+          {table.getHeaderGroups().map(renderHeaderRow)}
         </Thead>
         <Tbody>
-          {table.getRowModel().rows.map((row) => {
-            return (
-              <Tr
-                cursor="pointer"
-                onClick={() => onShipmentSelected(row.original)}
-                key={row.id}
-		data-testid="shipment-row"
-              >
-                {row.getVisibleCells().map((cell) => (
-                  <Td padding="13px 20px" verticalAlign="center" key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </Td>
-                ))}
-              </Tr>
-            );
-          })}
+          {table.getRowModel().rows.map(renderRow.bind(this, onShipmentSelected))}
         </Tbody>
       </Table>
     </TableContainer>
+  );
+}
+
+const renderCell = (cell) => {
+  return (
+    <Td padding="13px 20px" verticalAlign="center" key={cell.id}>
+      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+    </Td>
+  )
+}
+
+const renderRow = (onShipmentSelected, row) => {
+  return (
+    <Tr
+      cursor="pointer"
+      onClick={() => onShipmentSelected(row.original)}
+      key={row.id}
+      data-testid="shipment-row"
+    >
+      {row.getVisibleCells().map(renderCell)}
+    </Tr>
+  );
+}
+
+const renderHeader = (header) => {
+  return (
+    <Th
+      padding="0"
+      fontWeight="normal"
+      textTransform="none"
+      key={header.id}
+    >
+      <Flex
+        padding="13px 20px"
+        align="center"
+        onClick={header.column.getToggleSortingHandler()}
+        {...{ cursor: header.column.getCanSort() ? "pointer" : "" }}
+      >
+        {flexRender(
+          header.column.columnDef.header,
+          header.getContext(),
+        )}
+        <SortIcon column={header.column} />
+      </Flex>
+    </Th>
+  );
+}
+
+const renderHeaderRow = (headerGroup) => {
+  return (
+    <Tr key={headerGroup.id}>
+      {headerGroup.headers.map(renderHeader)}
+    </Tr>
   );
 }

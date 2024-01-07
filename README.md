@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Copy env.example to env.local and fill in some config (endpoint and token)
 
-## Getting Started
+To run
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run tests
+yarn test
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Testing:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- In getting a basic set of tests done quickly, I've a little too eagerly reached snapshots.  These are fairly suitable for more dumb components that don't have much state (but not so much for more complex components).  A big caveat with this kind of test is it's too easy to update them without properly checking test failures.
+- Testing of interactive table sorting and top-level state (page.tsx) is absent.  This is really just owing to time.
+- It would have been nice to have not repeated myself so much for the rendering of timestamps.  Evident in the design, there are a few different formats used and I've tried to duplicate this but at the same time adopt localized formatting as much as possible.  This localized formatting presents a small problem when it comes to testing: the locale including timezone should be mocked.
 
-## Learn More
+Styling:
 
-To learn more about Next.js, take a look at the following resources:
+- It would have been nice to extract on-element styling to something more global or reusable.  chakra ui has some good mechanisms for doing so.
+- The spacing between rows in Shipment component could use some work.
+- Empty tracking history is kind of ugly
+- Duplicate border on last row of tracking history
+- There is a vertical connection between events in tracking history in design.  this is absent.  stacked backgrounds could be used to achieve this effect
+picking up on 
+- Vertical alignment of sorting icons is off.
+- Loading and error presentation is a bit too basic.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+React Table:
+Because there where small icons on column headings that suggested the ability to sort, I've implemented interactive sorting for table rows via React Table.  I think there are cleaner uses of the API that are possible: there is a merged cell type that I haven't used which meant treating the Shipment colun cells a bit strangely.
+ShipmentTable should be split into smaller, separate files.
