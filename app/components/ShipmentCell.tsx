@@ -17,7 +17,9 @@ export const ShipmentCell = ({
 
   return (
     <>
-      <Box data-testid="tracking-id" fontSize="0.9em">{trackingId}</Box>
+      <Box data-testid="tracking-id" fontSize="0.9em">
+        {trackingId}
+      </Box>
       <Box data-testid="last-update" fontSize="0.7em" color="grey">
         Created: {date}
       </Box>

@@ -1,6 +1,6 @@
 import React from "react";
 import { TrackingEventSchema } from "./types/tracking_event";
-import { TrackingEvent } from "./TrackingEvent"
+import { TrackingEvent } from "./TrackingEvent";
 import { List } from "@chakra-ui/react";
 import { gql, useQuery } from "@apollo/client";
 
@@ -17,7 +17,11 @@ export const GET_TRACKING_EVENTS = gql`
   }
 `;
 
-export const TrackingHistory = ({ trackingId }: { trackingId: TrackingEventSchema['trackingId'] }) => {
+export const TrackingHistory = ({
+  trackingId,
+}: {
+  trackingId: TrackingEventSchema["trackingId"];
+}) => {
   const { loading, data, error } = useQuery(GET_TRACKING_EVENTS, {
     variables: { trackingId },
   });
@@ -40,4 +44,4 @@ export const TrackingHistory = ({ trackingId }: { trackingId: TrackingEventSchem
       ))}
     </List>
   );
-}
+};

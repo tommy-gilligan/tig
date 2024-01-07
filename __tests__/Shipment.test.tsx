@@ -1,8 +1,12 @@
-import { screen, render } from '@testing-library/react'
-import { Shipment } from '../app/components/Shipment'
-import { ShipmentStatus, ShipmentSchema, ShipmentStatusSeverity } from '../app/types/shipment'
+import { screen, render } from "@testing-library/react";
+import { Shipment } from "../app/components/Shipment";
+import {
+  ShipmentStatus,
+  ShipmentSchema,
+  ShipmentStatusSeverity,
+} from "../app/types/shipment";
 
-it('renders a delivered shipment', () => {
+it("renders a delivered shipment", () => {
   const shipment: ShipmentSchema = {
     id: "796d9fbf-e54d-40e8-a84b-bb1f723edd2b",
     trackingId: "6789",
@@ -13,12 +17,14 @@ it('renders a delivered shipment', () => {
     deliveryAddress: "1 Taylor Lane, McKellar NSW 2030",
     totalTransit: "3 days",
   };
-  const { container, getByTestId } = render(<Shipment shipment={shipment} />)
-  expect(getByTestId("delivered-time").textContent).toEqual("January 6, 2024 at 10:32 AM")
-  expect(container).toMatchSnapshot()
-})
+  const { container, getByTestId } = render(<Shipment shipment={shipment} />);
+  expect(getByTestId("delivered-time").textContent).toEqual(
+    "January 6, 2024 at 10:32 AM",
+  );
+  expect(container).toMatchSnapshot();
+});
 
-it('renders a shipment', () => {
+it("renders a shipment", () => {
   const shipment: ShipmentSchema = {
     id: "796d9fbf-e54d-40e8-a84b-bb1f723edd2b",
     trackingId: "6789",
@@ -29,6 +35,6 @@ it('renders a shipment', () => {
     deliveryAddress: "1 Taylor Lane, McKellar NSW 2030",
     totalTransit: "3 days",
   };
-  const { container } = render(<Shipment shipment={shipment} />)
-  expect(container).toMatchSnapshot()
-})
+  const { container } = render(<Shipment shipment={shipment} />);
+  expect(container).toMatchSnapshot();
+});

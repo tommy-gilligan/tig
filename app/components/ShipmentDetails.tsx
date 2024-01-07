@@ -64,4 +64,4 @@ export const ShipmentDetails = ({
       </DrawerContent>
     </Drawer>
   );
-}
+};

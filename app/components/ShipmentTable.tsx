@@ -68,12 +68,12 @@ const SortIcon = ({ column }: { column: Column<ShipmentSchema> }) => {
     let Icon = ArrowUpDownIcon;
 
     if ((column.getIsSorted() as string) === "asc") {
-      Icon = ArrowDownIcon
+      Icon = ArrowDownIcon;
     } else if ((column.getIsSorted() as string) === "desc") {
-      Icon = ArrowUpIcon
+      Icon = ArrowUpIcon;
     }
 
-    return <Icon marginLeft="10px" />
+    return <Icon marginLeft="10px" />;
   } else {
     return null;
   }
@@ -101,24 +101,24 @@ export const ShipmentTable = ({
   return (
     <TableContainer background="white" borderRadius="5px">
       <Table variant="simple">
-        <Thead>
-          {table.getHeaderGroups().map(renderHeaderRow)}
-        </Thead>
+        <Thead>{table.getHeaderGroups().map(renderHeaderRow)}</Thead>
         <Tbody>
-          {table.getRowModel().rows.map(renderRow.bind(this, onShipmentSelected))}
+          {table
+            .getRowModel()
+            .rows.map(renderRow.bind(this, onShipmentSelected))}
         </Tbody>
       </Table>
     </TableContainer>
   );
-}
+};
 
 const renderCell = (cell) => {
   return (
     <Td padding="13px 20px" verticalAlign="center" key={cell.id}>
       {flexRender(cell.column.columnDef.cell, cell.getContext())}
     </Td>
-  )
-}
+  );
+};
 
 const renderRow = (onShipmentSelected, row) => {
   return (
@@ -131,36 +131,24 @@ const renderRow = (onShipmentSelected, row) => {
       {row.getVisibleCells().map(renderCell)}
     </Tr>
   );
-}
+};
 
 const renderHeader = (header) => {
   return (
-    <Th
-      padding="0"
-      fontWeight="normal"
-      textTransform="none"
-      key={header.id}
-    >
+    <Th padding="0" fontWeight="normal" textTransform="none" key={header.id}>
       <Flex
         padding="13px 20px"
         align="center"
         onClick={header.column.getToggleSortingHandler()}
         {...{ cursor: header.column.getCanSort() ? "pointer" : "" }}
       >
-        {flexRender(
-          header.column.columnDef.header,
-          header.getContext(),
-        )}
+        {flexRender(header.column.columnDef.header, header.getContext())}
         <SortIcon column={header.column} />
       </Flex>
     </Th>
   );
-}
+};
 
 const renderHeaderRow = (headerGroup) => {
-  return (
-    <Tr key={headerGroup.id}>
-      {headerGroup.headers.map(renderHeader)}
-    </Tr>
-  );
-}
+  return <Tr key={headerGroup.id}>{headerGroup.headers.map(renderHeader)}</Tr>;
+};

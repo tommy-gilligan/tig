@@ -34,7 +34,12 @@ export const Shipment = ({ shipment }: { shipment: ShipmentSchema }) => {
               >
                 Delivered time
               </Td>
-              <Td data-testid="delivered-time" padding="0" paddingBottom="20px" verticalAlign="top">
+              <Td
+                data-testid="delivered-time"
+                padding="0"
+                paddingBottom="20px"
+                verticalAlign="top"
+              >
                 <ShipmentTimestamp timestamp={shipment.deliveredTime} />
               </Td>
             </Tr>
@@ -85,4 +90,4 @@ export const Shipment = ({ shipment }: { shipment: ShipmentSchema }) => {
       </Table>
     </TableContainer>
   );
-}
+};

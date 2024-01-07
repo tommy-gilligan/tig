@@ -2,11 +2,11 @@ import React from "react";
 import { TrackingEventSchema } from "./types/tracking_event";
 import { Text, Flex, Box, List, ListItem, ListIcon } from "@chakra-ui/react";
 import { gql, useQuery } from "@apollo/client";
-import { TrackingEventTimestamp } from "./TrackingEventTimestamp"
-import { TrackingEventIcon } from "./TrackingEventIcon"
+import { TrackingEventTimestamp } from "./TrackingEventTimestamp";
+import { TrackingEventIcon } from "./TrackingEventIcon";
 
 export const TrackingEvent = ({
-  trackingEvent: {statusSeverity, status, location, timestamp},
+  trackingEvent: { statusSeverity, status, location, timestamp },
 }: {
   trackingEvent: TrackingEventSchema;
 }) => {
@@ -26,7 +26,9 @@ export const TrackingEvent = ({
           marginRight="10px"
         >
           <Box>
-            <Text data-testid="status" as="b">{status}</Text>
+            <Text data-testid="status" as="b">
+              {status}
+            </Text>
             <br />
             <Text data-testid="location">{location}</Text>
           </Box>

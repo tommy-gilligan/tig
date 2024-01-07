@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import React from "react";
-import styles from './page.module.css'
+import styles from "./page.module.css";
 import { gql } from "@apollo/client";
 import { useState } from "react";
 import { Box, Heading, theme } from "@chakra-ui/react";
@@ -27,7 +27,9 @@ export const GET_SHIPMENTS = gql`
 
 export default function Home() {
   const { loading, data, error } = useQuery(GET_SHIPMENTS);
-  const [shipment, setShipment] = useState<ShipmentSchema | undefined>(undefined);
+  const [shipment, setShipment] = useState<ShipmentSchema | undefined>(
+    undefined,
+  );
 
   if (loading) {
     return <>Loading</>;
@@ -37,7 +39,7 @@ export default function Home() {
   }
 
   return (
-  <main theme={theme}>
+    <main theme={theme}>
       <Heading padding="10px" paddingLeft="20px">
         COMPANY CO.
       </Heading>
@@ -51,5 +53,6 @@ export default function Home() {
           onClose={() => setShipment(undefined)}
         />
       </Box>
-  </main>);
+    </main>
+  );
 }
