@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a status badge 1`] = `
+<div>
+  <span
+    class="chakra-badge css-1gj0zf8"
+  >
+    Delivered
+  </span>
+</div>
+`;
